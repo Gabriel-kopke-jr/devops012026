@@ -1,0 +1,10 @@
+FROM mariadb:10.6
+LABEL maintainer="Gabriel Kopke Junior gabrielkopke668@gmail.com"
+ENV MYSQL_ROOT_PASSWORD=123456789
+ENV MYSQL_DATABASE=backup
+ENV MYSQL_USER=express
+ENV MYSQL_PASSWORD=AllSafe0!
+EXPOSE 3306
+WORKDIR /docker-entrypoint-initdb.d/
+CMD ["mysqld"]
+
